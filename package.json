@@ -1,0 +1,25 @@
+{
+  "name": "to_do_app",
+  "version": "1.0.0",
+  "description": "crud application with to do app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashkriitr0418/CRUD_TO_DO.git"
+  },
+  "author": "Akash Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akashkriitr0418/CRUD_TO_DO/issues"
+  },
+  "homepage": "https://github.com/akashkriitr0418/CRUD_TO_DO#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
+  }
+}
