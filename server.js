@@ -1,23 +1,27 @@
-let express   
+
 let cors      
 let bodyParser
 let mongoose  
 let port      
-let todoRoutes
+let crudRoutes
+let userRoutes
 let app
 
-function myinit(){
-    express     = require("express");
+    const auth = require("./middleware/auth");
+    const   express     = require("express");
     cors        = require("cors");
     bodyParser  = require("body-parser");
     mongoose    = require("mongoose");
-    port        = 3000;
-    todoRoutes  = require("./routes/Routes");
+    port        = 3001;
+    crudRoutes  = require("./routes/crud");
+    userRoutes  = require("./routes/user")
     app         = express();
     app.use(cors());
     app.use(bodyParser.json());
-    app.use("/api", todoRoutes);
 
+    function myinit(){
+    app.use("/api", crudRoutes);
+    app.use("/api/user", userRoutes);
     app.listen(port, () => {
         console.log(`Listening to http://localhost:${port}`);
     });
